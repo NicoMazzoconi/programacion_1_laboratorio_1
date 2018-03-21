@@ -11,12 +11,24 @@ int main()
     printf("Ingrese el sueldo \n");
     scanf("%f", &sueldo);
 
+    while(sueldo < 8000)
+    {
+        printf("Ingrese el sueldo nuevamente \n");
+        scanf("%f", &sueldo);
+    }
+
     printf("Ingrese el apellido \n");
     fflush(stdin);
     scanf("%c", &apellido);
 
     printf("Ingrese el aumento \n");
     scanf("%d", &aumento);
+
+    while(aumento < 1 || aumento > 100)
+    {
+        printf("Ingrese el aumento valido \n");
+        scanf("%d", &aumento);
+    }
 
     printf("%c tiene un sueldo de %.2f, con un aumento del %d prociento \n", apellido, sueldo, aumento);
 
